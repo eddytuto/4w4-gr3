@@ -1,6 +1,6 @@
 @charset "UTF-8";
 /*
-theme name: lab-4 gr3 eddy martin
+theme name: groupe__3 eddy martin
 Author: Eddy martin
 Author URI: https://github.com/eddytuto
 Description: Ce thème servira de base de développement pour l'ensemble du cours 4W4. Chacune des étapes de développement se retrouvera sur gitHub à l'adresse: https://github.com/eddytuto/2022-4w4
@@ -494,6 +494,10 @@ COMPOSANTES
   transform: rotate(0);
 }
 
+#chk-burger {
+  display: none;
+}
+
 #chk-burger:checked ~ #burger {
   transform: rotate(90deg);
 }
@@ -572,6 +576,10 @@ COMPOSANTES
 .footer__author {
   color: #ffcabc;
   text-align: center;
+}
+
+.cours__contenu {
+  display: flex;
 }
 
 /* ---------------------------------------------------------

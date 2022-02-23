@@ -1,6 +1,6 @@
 # 4w4 - Conception d'interface et développement Web
 ### Auteur : Eddy Martin
-### Semaine #4 cours #2: La hierarchie des modèles, front-page.php, category-cours.php
+### Semaine #5 cours #1: La hierarchie des modèles, front-page.php, category-cours.php
 
 Développement des modules:
  - category-cours.php

@@ -15,5 +15,5 @@ wp_nav_menu(array(
 </footer>
 
 </body>
-
+<?php wp_footer(); ?>
 </html>
