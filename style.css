@@ -17,6 +17,8 @@ VARIABLES
 /* ---------------- LIENS */
 /* ---------------- LIENS FOOTER */
 /* ---------------- LIENS HEADER titre principal du site */
+/* ----------------------- couleur menu footer */
+/* ----------------------- couleur menu principal */
 /* ---------------- FONT */
 /* ------------------------------------- points de rupture des media queries */
 /* ---------------------------------------------------------
@@ -346,6 +348,8 @@ html {
 /* ---------------------------------------------------------
 ÉLÉMENTS
 --------------------------------------------------------- */
+/* ---------------------------------- */
+/* -----------------------------------*/
 a {
   color: #7b5647;
 }
@@ -403,6 +407,52 @@ a:hover, a:active {
 }
 
 .header__titre a:hover, .header__titre a:active {
+  outline: 0;
+}
+
+.site__footer .menu-item a {
+  color: #fff;
+  background-color: #444;
+}
+
+.site__footer .menu-item a:visited {
+  color: #ddd;
+  background-color: #555;
+}
+
+.site__footer .menu-item a:hover, .site__footer .menu-item a:focus, .site__footer .menu-item a:active {
+  color: #f00;
+  background-color: #222;
+}
+
+.site__footer .menu-item a:focus {
+  outline: thin dotted;
+}
+
+.site__footer .menu-item a:hover, .site__footer .menu-item a:active {
+  outline: 0;
+}
+
+.menu-principal .menu-item a {
+  color: #0f0;
+  background-color: #ddd;
+}
+
+.menu-principal .menu-item a:visited {
+  color: #0d0;
+  background-color: #ccc;
+}
+
+.menu-principal .menu-item a:hover, .menu-principal .menu-item a:focus, .menu-principal .menu-item a:active {
+  color: #00f;
+  background-color: #ddd;
+}
+
+.menu-principal .menu-item a:focus {
+  outline: thin dotted;
+}
+
+.menu-principal .menu-item a:hover, .menu-principal .menu-item a:active {
   outline: 0;
 }
 
@@ -473,6 +523,8 @@ COMPOSANTES
 }
 
 .site__header {
+  display: flex;
+  align-items: center;
   background-color: #6faee2;
   color: #fa9292;
   padding-left: 10px;
@@ -486,6 +538,16 @@ COMPOSANTES
 .site__header .header__description {
   font-size: 1.5rem;
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+.util {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+}
+
+.util__lien {
+  display: flex;
 }
 
 #burger {
@@ -525,11 +587,6 @@ COMPOSANTES
   display: block;
   text-decoration: none;
   padding: 4px;
-  background-color: #8293e3;
-}
-
-.menu-item a:hover {
-  background-color: #2832b8;
 }
 
 @media screen and (min-width: 800px) {
@@ -580,6 +637,34 @@ COMPOSANTES
 
 .cours__contenu {
   display: flex;
+}
+
+.recherche {
+  position: relative;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.recherche__input {
+  flex: 1;
+  width: 100%;
+  background-color: rgba(195, 196, 223, 0.1);
+  transition: all .3s;
+  border: none;
+  outline: none;
+}
+
+.recherche__input:focus {
+  background-color: rgba(195, 196, 223, 0.5);
+}
+
+.recherche__bouton {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* ---------------------------------------------------------
