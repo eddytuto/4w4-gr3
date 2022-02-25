@@ -1,12 +1,11 @@
 # 4w4 - Conception d'interface et développement Web
 ### Auteur : Eddy Martin
-### Semaine #5 cours #1: La hierarchie des modèles, front-page.php, category-cours.php
+### Semaine #5 cours #2: Engin de recherche de wp
 
 Développement des modules:
- - category-cours.php
- - single.php
- - page.php
- - front-page.php
+ - search.php
+ - searchform.php
+Développement d'un nouveau mixin link_menu
 
  Début d'une animation
 
