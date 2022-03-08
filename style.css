@@ -473,7 +473,7 @@ COMPOSANTES
 
 .formation__titre {
   font-size: 2rem;
-  color: #ebcac1;
+  color: #dbdff3;
   margin: 10px 0px;
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
@@ -508,7 +508,7 @@ COMPOSANTES
 
 .cours__titre {
   font-size: 1.5rem;
-  color: #ebcac1;
+  color: #dbdff3;
   margin: 5px 0px;
 }
 
@@ -526,7 +526,7 @@ COMPOSANTES
   display: flex;
   align-items: center;
   background-color: #6faee2;
-  color: #fa9292;
+  color: #d6d8e4;
   padding-left: 10px;
 }
 
@@ -601,38 +601,52 @@ COMPOSANTES
 .site__footer {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: #07143b;
+  color: #e2e7f8;
   padding: 15px;
 }
 
-.site__footer__menu__ul {
+.site__footer__colonne {
+  display: flex;
+  justify-content: space-between;
+}
+
+.site__footer__colonne section {
+  flex: 0 0 30%;
+  border: 1px solid #aaa;
+}
+
+.site__footer__ligne {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site__footer__ligne section p {
+  text-align: center;
+}
+
+.footer__menu__nav__ul {
   display: flex;
   list-style-type: none;
   justify-content: center;
 }
 
-.site__footer__menu__ul .menu-item {
+.footer__menu__nav__ul .menu-item {
   margin: 10px 5px;
 }
 
-.site__footer__menu__ul .menu-item a {
+.footer__menu__nav__ul .menu-item a {
   display: flex;
   align-items: center;
   padding: 3px;
 }
 
-.site__footer__menu__ul .menu-item a svg {
+.footer__menu__nav__ul .menu-item a svg {
   color: #f40b0b;
 }
 
-.site__footer__menu__ul .menu-item a:hover svg {
+.footer__menu__nav__ul .menu-item a:hover svg {
   color: #19e123;
-}
-
-.footer__titre,
-.footer__presentation,
-.footer__author {
-  color: #ffcabc;
-  text-align: center;
 }
 
 .cours__contenu {
