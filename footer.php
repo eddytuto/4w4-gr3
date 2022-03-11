@@ -1,21 +1,24 @@
 <footer class="site__footer">
     <div class="site__footer__colonne">
         <section class="footer__article">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eos fugit perspiciatis ipsam itaque maxime reiciendis laborum laudantium illum porro. Ratione mollitia qui magni hic numquam impedit sit dignissimos atque!
+        <?php get_sidebar("footer_colonne_1");  ?>
         </section>
         <section class="footer__lien">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Neque, alias nihil modi autem pariatur id eaque molestias, quis omnis rerum necessitatibus quibusdam magnam voluptatum perferendis obcaecati excepturi sint ullam non.
+        <?php get_sidebar("footer_colonne_2");  ?>
         </section>
         <section class="footer__adresse">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem non at expedita minima optio eligendi, sit natus minus quia eius ipsam praesentium illo quo magni explicabo, delectus alias cumque exercitationem.
+        <?php get_sidebar("footer_colonne_3");  ?>
         </section>
     </div>
     <div class="site__footer__ligne">
         <section class="footer__description">
-            <p>4W4-Conception d'interface et développement Web - TIM - Collège de Maisonneuve</p>
+            <?php get_sidebar("footer_ligne_2");  ?>
         </section>
         <section class="footer__copyright">
             <p>&copy; Tous droit réservé - TIM - Collège de Maisonneuve</p>
+        </section>
+        <section class="footer_sociaux">
+         <?php get_sidebar("footer_ligne_1");  ?>
         </section>
         <section class="footer__auteur">
             <p>Auteur : Eddy Martin</p>
