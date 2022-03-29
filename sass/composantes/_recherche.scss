@@ -28,3 +28,20 @@
         svg{}
     }
 }
+
+.cidw_recherche {
+    .wp-block-search__input {
+        background-color: rgba(#000, .3);
+        &:focus{
+            background-color: rgba(#000, .1);  
+        }
+    }
+
+    .wp-block-search__button {
+        background-image: url('https://s2.svgbox.net/hero-solid.svg?ic=search&color=999');
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-left : 0;
+        width : 30px;
+    }
+}

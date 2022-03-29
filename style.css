@@ -20,6 +20,8 @@ VARIABLES
 /* ----------------------- couleur menu footer */
 /* ----------------------- couleur menu principal */
 /* ---------------- FONT */
+/* ----------------------- couleur bouton menu-catégorie cours */
+/* --------------------------  couleur titre */
 /* ------------------------------------- points de rupture des media queries */
 /* ---------------------------------------------------------
 INITIALISATION
@@ -456,6 +458,52 @@ a:hover, a:active {
   outline: 0;
 }
 
+h1 {
+  font-size: clamp(2rem, 4vw, 5rem);
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+}
+
+h4 {
+  font-size: 2.3rem;
+}
+
+h5 {
+  font-size: 2rem;
+}
+
+h6 {
+  font-size: 1.5rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+h1, h2 {
+  font-family: "Montserrat", sans-serif;
+  color: #070433;
+}
+
+h3, h4 {
+  font-family: "Poppins", sans-serif;
+  color: #26234e;
+}
+
+h5, h6 {
+  font-family: "Roboto", sans-serif;
+}
+
+p {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+
 /* ---------------------------------------------------------
 COMPOSANTES
 --------------------------------------------------------- */
@@ -472,10 +520,7 @@ COMPOSANTES
 }
 
 .formation__titre {
-  font-size: 2rem;
-  color: #dbdff3;
   margin: 10px 0px;
-  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
 .formation__liste {
@@ -484,6 +529,8 @@ COMPOSANTES
 }
 
 .formation__cours {
+  background-repeat: no-repeat;
+  background-position: 97% 3%;
   background-color: #d1e9ff;
   box-shadow: #394044 1px -1px 10px;
   border-radius: 5px;
@@ -520,6 +567,30 @@ COMPOSANTES
 
 .cours__description {
   font-size: 1rem;
+}
+
+.web {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=globe");
+}
+
+.jeu {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=games");
+}
+
+.design {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=color_lens");
+}
+
+.utilitaire {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=tools-bold");
+}
+
+.video {
+  background-image: url("https://s2.svgbox.net/octicons.svg?ic=device-camera-video");
+}
+
+.creation-3d {
+  background-image: url("https://s2.svgbox.net/materialui.svg?ic=view_in_ar");
 }
 
 .site__header {
@@ -569,7 +640,7 @@ COMPOSANTES
 @media screen and (min-width: 800px) {
   .util {
     margin-left: auto;
-    width: 300px;
+    width: 350px;
   }
 }
 
@@ -633,6 +704,29 @@ COMPOSANTES
   .home .menu-principal-container {
     display: none;
   }
+}
+
+.menu-categorie_cours-container .menu {
+  display: flex;
+  list-style-type: none;
+}
+
+.menu-categorie_cours-container .menu .menu-item {
+  margin: 0 15px;
+  background-color: #2409bb;
+}
+
+.menu-categorie_cours-container .menu .menu-item a {
+  color: #eed70b;
+  padding: 5px;
+}
+
+.menu-categorie_cours-container .menu .menu-item:hover {
+  background-color: #3552a1;
+}
+
+.menu-categorie_cours-container .menu .menu-item:hover a {
+  color: #ece57f;
 }
 
 .site__footer {
@@ -721,6 +815,22 @@ COMPOSANTES
   align-items: center;
   justify-content: center;
   border: none;
+}
+
+.cidw_recherche .wp-block-search__input {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.cidw_recherche .wp-block-search__input:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.cidw_recherche .wp-block-search__button {
+  background-image: url("https://s2.svgbox.net/hero-solid.svg?ic=search&color=999");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-left: 0;
+  width: 30px;
 }
 
 /* ---------------------------------------------------------
