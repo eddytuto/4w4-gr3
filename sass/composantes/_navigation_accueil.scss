@@ -1,4 +1,4 @@
-.menu-accueil-container { //nav
+.menu-accueil-container, .menu-evenement-container { //nav
 
     .menu { //ul
         display : flex;
@@ -20,13 +20,13 @@
             width : 15%;
             height : 250px;
             padding : 10px;
-            background-color: $color__bouton__background;
+           
             a {
                 display : flex;
                 flex-direction: column;
                 justify-content: space-between;
                 align-items: center;
-                color : $color__bouton__color;
+               
                 font-size: 1.5rem;
                 height : 100%;
                 hr{
@@ -46,9 +46,9 @@
 
             }
         &:hover {
-            background-color: $color__bouton__background--hover;
+           
             a {
-                color : $color__bouton__color--hover;
+               
             }
         }    
 
@@ -60,9 +60,40 @@
 
 
 
+} // fin .menu-accueil-container
+
+.menu-accueil-container {
+    .menu-item {
+        background-color: $color__bouton__background;
+        a{
+            color : $color__bouton__color;
+   
+        }
+    &:hover{
+        background-color: $color__bouton__background--hover;
+        a{
+            color : $color__bouton__color--hover;
+        }
+    }    
+    }
+}
 
 
 
+.menu-evenement-container {
 
+    .menu-item {
+        background-color: $couleur__carte__evenement__background ;
+        a{
+            color: $couleur__carte__evenement ;
+   
+        }
+    &:hover{
+        background-color: $couleur__carte__evenement__background--hover ;
+        a{
+            color: $couleur__carte__evenement--hover ;
+        }
+    }    
+    }
 
 }
