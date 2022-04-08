@@ -137,41 +137,30 @@ function my_register_sidebars() {
     /* Repeat register_sidebar() code for additional sidebars. */
 }
 
+/**
+ * Modifie la requête global de WP_query.
+ * 
+ * @param WP_query $query : Objet contenant la requête global.
+ * @return WP_query $query. 
+ */
 function cidw_4w4_pre_get_posts(WP_Query $query)
 {
-
-    if (!is_admin() && is_main_query() && is_category(array('cours','web','jeu','design','utilitaire','creation-3d','video'))   )
+    if (is_admin() || !is_main_query() || !is_category(array('cours','web','jeu','design','utilitaire','creation-3d','video'))   )
     {
-       //var_dump($query);
-       // die();
+        return $query;
+    }        
+    else
+    {
        
-      $ordre = get_query_var('ordre');
-      // echo "-----ordre= "  . $ordre  . "-------------------------<br>";
-      $cle = get_query_var('cletri');
-      // echo "-----cle= "  . $cle  . "-------------------------<br>";
-
-       $query->set('order',  $ordre);
-       $query->set('orderby', $cle);
-       $query->set('postperpage','-1');
-
-
+        $ordre = get_query_var('ordre');
+        $cle = get_query_var('cletri');       
+        $query->set('order',  $ordre);
+        $query->set('orderby', $cle);
+        $query->set('postperpage','-1');
+        return $query;
     }
-    
-
-/*    
-  if (!is_admin() && is_main_query() && is_category(array('web','cours','design','video','utilitaire','creation-3d','jeu'))) 
-    {
-    //$ordre = get_query_var('ordre');
-    $query->set('posts_per_page', -1);
-    // $query->set('orderby', $cle);
-    $query->set('orderby', 'title');
-    // $query->set('order',  $ordre);
-    $query->set('order',  'ASC');
-    // var_dump($query);
-    // die();
-   }
-  */ 
 }
+
 
 
 function cidw_4w4_query_vars($params){

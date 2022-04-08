@@ -21,6 +21,10 @@ INITIALISATION
 --------------------------------------------------------- */
 @import "initialisation/normalize";
 @import "initialisation/box-sizing";
+/* --------------------------------------------------------
+LAYOUT
+--------------------------------------------------------- */
+@import "layout/layout";
 
 /* ---------------------------------------------------------
 ÉLÉMENTS
@@ -36,14 +40,13 @@ COMPOSANTES
 @import "composantes/navigation";
 @import "composantes/navigation_accueil";
 @import "composantes/navigation_categorie_cours";
+/* ---------------------------------------------------- FOOTER */
 @import "composantes/footer";
 @import "composantes/single_cours";
+/* ---------------------------------------------------- RECHERCHE */
 @import "composantes/recherche";
 /* ---------------------------------------------------------
 ANIMATION
 --------------------------------------------------------- */
 @import "animation/entete";
-/* ---------------------------------------------------------
-LAYOUT
---------------------------------------------------------- */
-@import "layout/layout";
+

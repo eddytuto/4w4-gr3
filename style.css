@@ -347,6 +347,73 @@ html {
   box-sizing: border-box;
 }
 
+/* --------------------------------------------------------
+LAYOUT
+--------------------------------------------------------- */
+/*
+theme name: Lab 2 Lemieux Florence
+*/
+.site {
+  background-color: rgba(218, 224, 241, 0.5);
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  max-width: 100vw;
+}
+
+.home::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #60b4eb;
+  z-index: -1;
+  clip-path: polygon(87% 0, 100% 0, 100% 100%, 58% 100%);
+}
+
+.site__header {
+  grid-area: header;
+  background-color: rgba(111, 174, 226, 0.5);
+}
+
+.site__barre {
+  grid-area: sidebar;
+  background-color: #051d29;
+}
+
+.site__main {
+  grid-area: main;
+  background-color: rgba(213, 230, 241, 0.5);
+}
+
+.site__footer {
+  grid-area: footer;
+  background-color: #07143b;
+}
+
+/* configuration mobile */
+.site {
+  display: grid;
+  gap: 0px;
+  grid-template-columns: auto;
+  grid-template-areas: "sidebar" "header" "main" "footer";
+}
+
+@media screen and (min-width: 800px) {
+  .site {
+    grid-template-columns: 300px auto;
+    grid-template-areas: "header header" "sidebar main" "footer footer";
+  }
+  .home {
+    display: grid;
+    gap: 0px;
+    grid-template-columns: auto;
+    grid-template-areas: "sidebar" "header" "main" "footer";
+  }
+}
+
 /* ---------------------------------------------------------
 ÉLÉMENTS
 --------------------------------------------------------- */
@@ -792,6 +859,7 @@ COMPOSANTES
   color: #ece57f;
 }
 
+/* ---------------------------------------------------- FOOTER */
 .site__footer {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
   background-color: #07143b;
@@ -801,12 +869,22 @@ COMPOSANTES
 
 .site__footer__colonne {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
 }
 
 .site__footer__colonne section {
-  flex: 0 0 30%;
+  flex: 0 0 100%;
   border: 1px solid #aaa;
+}
+
+@media screen and (min-width: 800px) {
+  .site__footer__colonne {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .site__footer__colonne section {
+    flex: 0 0 30%;
+  }
 }
 
 .site__footer__ligne {
@@ -821,8 +899,15 @@ COMPOSANTES
 
 .footer__menu__nav__ul {
   display: flex;
+  flex-direction: column;
   list-style-type: none;
   justify-content: center;
+}
+
+@media screen and (min-width: 800px) {
+  .footer__menu__nav__ul {
+    flex-direction: row;
+  }
 }
 
 .footer__menu__nav__ul .menu-item {
@@ -847,6 +932,7 @@ COMPOSANTES
   display: flex;
 }
 
+/* ---------------------------------------------------- RECHERCHE */
 .recherche {
   position: relative;
   display: flex;
@@ -923,72 +1009,6 @@ ANIMATION
   }
   100% {
     transform: translateY(0);
-  }
-}
-
-/* ---------------------------------------------------------
-LAYOUT
---------------------------------------------------------- */
-/*
-theme name: Lab 2 Lemieux Florence
-*/
-.site {
-  background-color: rgba(218, 224, 241, 0.5);
-  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
-}
-
-.home::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background-color: #60b4eb;
-  z-index: -1;
-  clip-path: polygon(87% 0, 100% 0, 100% 100%, 58% 100%);
-}
-
-.site__header {
-  grid-area: header;
-  background-color: rgba(111, 174, 226, 0.5);
-}
-
-.site__barre {
-  grid-area: sidebar;
-  background-color: #051d29;
-}
-
-.site__main {
-  grid-area: main;
-  background-color: rgba(213, 230, 241, 0.5);
-}
-
-.site__footer {
-  grid-area: footer;
-  background-color: #07143b;
-}
-
-/* configuration mobile */
-.site {
-  display: grid;
-  gap: 0px;
-  grid-template-columns: auto;
-  grid-template-areas: "sidebar" "header" "main" "footer";
-}
-
-@media screen and (min-width: 800px) {
-  .site {
-    grid-template-columns: 300px auto;
-    grid-template-areas: "header header" "sidebar main" "footer footer";
-  }
-  .home {
-    display: grid;
-    gap: 0px;
-    grid-template-columns: auto;
-    grid-template-areas: "sidebar" "header" "main" "footer";
   }
 }
 /*# sourceMappingURL=style.css.map */
