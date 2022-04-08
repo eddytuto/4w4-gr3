@@ -178,7 +178,6 @@ return $params;
     //var_dump($params); die();
     return $params;
 }
-
 */
 add_action('pre_get_posts', 'cidw_4w4_pre_get_posts');
 /* 

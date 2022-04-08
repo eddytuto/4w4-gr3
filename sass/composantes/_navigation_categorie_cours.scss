@@ -19,6 +19,12 @@
                 }
             }
         }
+        .current-menu-item {
+            background-color: $color__bouton__background--current;
+            a { 
+                color : $color__bouton__color--current;
+            }
+        }
 
     }
 }
