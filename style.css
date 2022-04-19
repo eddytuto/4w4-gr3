@@ -890,6 +890,22 @@ COMPOSANTES
   color: #fecf00;
 }
 
+.modal {
+  position: fixed;
+  width: 50%;
+  height: 50%;
+  border: 10px solid #aaa;
+  background-color: aqua;
+  top: 25%;
+  left: 25%;
+  transform: scale(0.1);
+  transition: all 1s ease-in-out;
+}
+
+.modal:hover {
+  transform: scale(1);
+}
+
 /* ---------------------------------------------------- FOOTER */
 .site__footer {
   font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;

@@ -10,9 +10,13 @@
     $titreFiltreCours = substr($titre, 4, -6);
     // $nbHeures = substr($titre, -6);
     $nbHeures = get_field( "nombre_dheures" );
+    $departement = get_field( "departement" );
   
     $sigleCours = substr($titre, 0, 3);
-    $descCours = get_the_excerpt();
+   // $descCours = get_the_excerpt();
+    $descCours = wp_trim_words(get_the_content(), 15, '<button class="cours__desc__suite"> la suite </button>');
+
+
     ?>
 
     <?php the_post_thumbnail("thumbnail"); ?>
