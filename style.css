@@ -890,7 +890,7 @@ COMPOSANTES
   color: #fecf00;
 }
 
-.modal {
+.boite__modale {
   position: fixed;
   width: 50%;
   height: 50%;
@@ -898,11 +898,11 @@ COMPOSANTES
   background-color: aqua;
   top: 25%;
   left: 25%;
-  transform: scale(0.1);
+  transform: scale(0);
   transition: all 1s ease-in-out;
 }
 
-.modal:hover {
+.boite__modale__ouvrir {
   transform: scale(1);
 }
 
