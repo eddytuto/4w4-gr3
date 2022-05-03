@@ -387,6 +387,8 @@ theme name: Lab 2 Lemieux Florence
 .site__main {
   grid-area: main;
   background-color: rgba(213, 230, 241, 0.5);
+  display: flex;
+  flex-direction: column;
 }
 
 .site__footer {
@@ -898,6 +900,23 @@ COMPOSANTES
 
 .boite__modale__ouvrir {
   transform: scale(1);
+}
+
+/**
+Galerie gutenberg de la page d'accueil
+*/
+.galerie {
+  width: 100%;
+}
+
+@media screen and (min-width: 500px) {
+  .galerie {
+    width: 75%;
+  }
+}
+
+.home .site__main {
+  align-items: center;
 }
 
 /* ---------------------------------------------------- FOOTER */
