@@ -19,6 +19,7 @@
 
 }
 
+/* --------------------------------------------  boite modale  seulement */
 .boite__modale{
     width: 50%;
     height : 50%;
@@ -26,20 +27,33 @@
     left:25%;
 }
 
-
+/* -------------------------------------------- boite carrousel */
 .boite__carrousel{
     width: 75%;
     height : 75%;
     top:12.5%;
     left:12.5%;
 
-    img {
+    &__img {
         position : absolute;
         object-fit:cover;
         width : 100%;
         height: 100%;
         top :0;
         left : 0;
+        img {
+            position : absolute;
+            object-fit:cover;
+            width : 100%;
+            height: 100%;
+            top :0;
+            left : 0;
+            opacity: 0;
+            transition: all 1s ease-in-out;
+            &.img--ouvrir{
+                opacity: 1;
+            }
+        }
     }
 
     &__navigation{
@@ -51,11 +65,11 @@
         border : 1ps solid red;
         z-index: 1;
 
-        button{
+        .bouton{
             width: 20px;
             height: 20px;
             border-radius: 100%;
-            &:focus {
+            &:checked {
                 background-color: black;
             }
         }
