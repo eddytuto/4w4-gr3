@@ -27,7 +27,7 @@
         bouton.setAttribute('class','bouton')
         bouton.setAttribute('name','bouton')
         bouton.setAttribute('checked','')
-        bouton.dataset.index = index++
+        bouton.dataset.index = index
         boite__carrousel__navigation.append(bouton)
 
         /* On écoute mousedown sur chacun des boutons */
@@ -43,11 +43,13 @@
 
         /* Ouvrir la boite__carrousel */
         img.addEventListener('mousedown', function(){
-            console.log(this.tagName)
-            boite__carrousel.classList.add('boite__carrousel__ouvrir')
-            console.log(this.getAttribute('src'))
-            elmImg.setAttribute('src', this.getAttribute('src'))
+           // console.log(this.tagName)
+          boite__carrousel.classList.add('boite__carrousel__ouvrir')
+          //  console.log(this.getAttribute('src'))
+           // elmImg.setAttribute('src', this.getAttribute('src'))
+            boite__carrousel__img.children[0].classList.add('img--ouvrir')
         })
+       index++ 
     }
 
     boite__carrousel__ferme.addEventListener('mousedown', function(){
