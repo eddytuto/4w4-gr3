@@ -1,7 +1,7 @@
 .boite__modale, .boite__carrousel{
     position : fixed;
     border : 10px solid #aaa;
-    background-color: aqua;
+    background-color: #aaa;
     transform : scale(0);
     transition : all 1s ease-in-out;
     &__ouvrir {
@@ -56,7 +56,7 @@
             height: 100%;
             top :0;
             left : 0;
-            //opacity: 0;
+            opacity: 1;
             transform : translateX(-100%);
             
             transition: all 1s ease-in-out;

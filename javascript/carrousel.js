@@ -24,18 +24,25 @@
         bouton.setAttribute('type','radio')
         bouton.setAttribute('class','bouton')
         bouton.setAttribute('name','bouton')
-        bouton.setAttribute('checked','')
+        bouton.checked = false
         bouton.dataset.index = index
         boite__carrousel__navigation.append(bouton)
 
         /* On écoute mousedown sur chacun des boutons */
-        bouton.addEventListener('change', function(e){
+        let prec = null
+        bouton.addEventListener('mousedown', function(e){
             e.preventDefault
             console.log(e)
-            console.log(this.getAttribute('checked'))
-            boite__carrousel__img.children[this.dataset.index].classList.remove('img--ouvrir')
+            if (prec){
+                console.log("prec.dataset.index = " + prec.dataset.index)
+            }
+            if(this !== prec){
+                prec=this
+            }
+            
             boite__carrousel__img.children[this.dataset.index].classList.add('img--ouvrir')
            
+         
         })
 
 
@@ -46,6 +53,7 @@
           //  console.log(this.getAttribute('src'))
            // elmImg.setAttribute('src', this.getAttribute('src'))
             boite__carrousel__img.children[0].classList.add('img--ouvrir')
+            boite__carrousel__navigation.children[0].checked = true
         })
        index++ 
     }
