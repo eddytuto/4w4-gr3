@@ -889,7 +889,7 @@ COMPOSANTES
 .boite__modale, .boite__carrousel {
   position: fixed;
   border: 10px solid #aaa;
-  background-color: #aaa;
+  background-color: aqua;
   transform: scale(0);
   transition: all 1s ease-in-out;
 }
@@ -907,7 +907,6 @@ COMPOSANTES
   z-index: 1;
 }
 
-/* --------------------------------------------  boite modale  seulement */
 .boite__modale {
   width: 50%;
   height: 50%;
@@ -915,48 +914,20 @@ COMPOSANTES
   left: 25%;
 }
 
-/* -------------------------------------------- boite carrousel */
 .boite__carrousel {
-  width: 95%;
-  height: 95%;
-  top: 2.5%;
-  left: 2.5%;
+  width: 75%;
+  height: 75%;
+  top: 12.5%;
+  left: 12.5%;
 }
 
-@media screen and (min-width: 500px) {
-  .boite__carrousel {
-    width: 75%;
-    height: 75%;
-    top: 12.5%;
-    left: 12.5%;
-  }
-}
-
-.boite__carrousel__img {
-  position: absolute;
-  object-fit: cover;
-  overflow: hidden;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.boite__carrousel__img img {
+.boite__carrousel img {
   position: absolute;
   object-fit: cover;
   width: 100%;
   height: 100%;
   top: 0;
   left: 0;
-  opacity: 1;
-  transform: translateX(-100%);
-  transition: all 1s ease-in-out;
-}
-
-.boite__carrousel__img img.img--ouvrir {
-  opacity: 1;
-  transform: translateX(0);
 }
 
 .boite__carrousel__navigation {
@@ -969,13 +940,13 @@ COMPOSANTES
   z-index: 1;
 }
 
-.boite__carrousel__navigation .bouton {
+.boite__carrousel__navigation button {
   width: 20px;
   height: 20px;
   border-radius: 100%;
 }
 
-.boite__carrousel__navigation .bouton:checked {
+.boite__carrousel__navigation button:focus {
   background-color: black;
 }
 
